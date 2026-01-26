@@ -1,0 +1,26 @@
+/* Hero section styles */
+
+.hero {
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 50%, #e8e8e8 100%);
+    text-align: center;
+    padding: 8rem 2rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #666;
+    font-weight: 300;
+    line-height: 1.8;
+}

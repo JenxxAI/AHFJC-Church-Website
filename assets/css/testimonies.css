@@ -1,0 +1,46 @@
+/* Testimonies section styles */
+
+.testimonies {
+    background: white;
+}
+
+.testimonies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.testimony-card {
+    background: white;
+    padding: 2.5rem;
+    border-left: 3px solid #1a1a1a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimony-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.testimony-quote {
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimony-author {
+    color: #1a1a1a;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.testimony-church {
+    color: #999;
+    font-size: 0.9rem;
+    font-weight: 300;
+}

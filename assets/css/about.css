@@ -1,0 +1,62 @@
+/* About section styles */
+
+.about {
+    background: white;
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 300;
+    line-height: 1.9;
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    margin-top: 5rem;
+    text-align: left;
+}
+
+.mission-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.mission-card h3 {
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.mission-card ul {
+    list-style: none;
+    color: #666;
+}
+
+.mission-card li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-weight: 300;
+}
+
+.mission-card li:before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #1a1a1a;
+}

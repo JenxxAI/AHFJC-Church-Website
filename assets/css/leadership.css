@@ -1,0 +1,48 @@
+/* Leadership section styles */
+
+.leadership {
+    background: white;
+}
+
+.leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.leader-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader-card .position {
+    color: #999;
+    font-weight: 400;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.leader-card h3 {
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.leader-card p {
+    color: #666;
+    font-weight: 300;
+    font-size: 0.95rem;
+}
+
+.leader-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.08);
+}

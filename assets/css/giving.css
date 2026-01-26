@@ -1,0 +1,54 @@
+/* Giving section styles */
+
+.giving {
+    background: white;
+}
+
+.giving-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.giving-content p {
+    color: #666;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
+
+.giving-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.giving-card {
+    background: white;
+    padding: 2rem;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.giving-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.giving-card h3 {
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.giving-card p {
+    color: #666;
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}

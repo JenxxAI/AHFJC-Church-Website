@@ -1,0 +1,66 @@
+/* Churches section styles */
+
+.churches {
+    background: linear-gradient(to bottom, #fafafa 0%, #f8f8f8 100%);
+}
+
+.churches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.church-card {
+    background: white;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+}
+
+.church-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.church-image {
+    width: 100%;
+    height: 240px;
+    background: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.church-image svg {
+    width: 80px;
+    height: 80px;
+    opacity: 0.3;
+}
+
+.church-content {
+    padding: 2rem;
+}
+
+.church-card h3 {
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.church-card .pastor-label {
+    color: #999;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.church-card p {
+    color: #333;
+    font-weight: 400;
+}

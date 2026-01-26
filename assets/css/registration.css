@@ -1,0 +1,110 @@
+/* Registration section styles */
+
+.registration {
+    background: white;
+}
+
+.registration-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.registration-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.registration-header h3 {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.registration-header p {
+    color: #666;
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.event-details {
+    background: #fafafa;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-left: 4px solid #1a1a1a;
+}
+
+.event-details h4 {
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.detail-item {
+    color: #666;
+    font-weight: 300;
+}
+
+.detail-item strong {
+    display: block;
+    color: #1a1a1a;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.form-embed {
+    background: #f5f5f5;
+    padding: 2rem;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-embed iframe {
+    width: 100%;
+    min-height: 800px;
+    border: none;
+}
+
+.form-placeholder {
+    color: #999;
+    font-weight: 300;
+}
+
+.form-placeholder h4 {
+    color: #666;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.form-placeholder p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-placeholder code {
+    display: block;
+    background: white;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-size: 0.85rem;
+    color: #333;
+    border: 1px solid #e5e5e5;
+    overflow-x: auto;
+}

@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHFJCPI - Apostolic Holiness Fellowship of Jesus Christ Philippines Inc.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        header {
+            background: #000000;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        header .acronym {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 8px;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.7;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            background: white;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        nav a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.5;
+        }
+
+        .hero {
+            background: #f5f5f5;
+            text-align: center;
+            padding: 8rem 2rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            color: #1a1a1a;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 4rem;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+        }
+
+        .leadership {
+            background: white;
+        }
+
+        .leaders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .leader-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .leader-card .position {
+            color: #999;
+            font-weight: 400;
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .leader-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .leader-card p {
+            color: #666;
+            font-weight: 300;
+            font-size: 0.95rem;
+        }
+
+        .churches {
+            background: #fafafa;
+        }
+
+        .churches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .church-card {
+            background: white;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .church-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .church-image {
+            width: 100%;
+            height: 240px;
+            background: #e5e5e5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .church-image svg {
+            width: 80px;
+            height: 80px;
+            opacity: 0.3;
+        }
+
+        .church-content {
+            padding: 2rem;
+        }
+
+        .church-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .church-card .pastor-label {
+            color: #999;
+            font-size: 0.8rem;
+            margin-bottom: 0.3rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .church-card p {
+            color: #333;
+            font-weight: 400;
+        }
+
+        .about {
+            background: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.9;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+            margin-top: 5rem;
+            text-align: left;
+        }
+
+        .mission-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .mission-card ul {
+            list-style: none;
+            color: #666;
+        }
+
+        .mission-card li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-weight: 300;
+        }
+
+        .mission-card li:before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #1a1a1a;
+        }
+
+        .ministry {
+            background: white;
+        }
+
+        .ministry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .ministry-card {
+            background: white;
+            border: 1px solid #e5e5e5;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .ministry-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ministry-image {
+            width: 100%;
+            height: 220px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .ministry-image svg {
+            width: 60px;
+            height: 60px;
+            opacity: 0.4;
+        }
+
+        .ministry-content {
+            padding: 2rem;
+        }
+
+        .ministry-category {
+            color: #999;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+        }
+
+        .ministry-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .ministry-card .date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            font-weight: 300;
+        }
+
+        .ministry-card p {
+            color: #666;
+            font-weight: 300;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .events {
+            background: #fafafa;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .event-card {
+            background: white;
+            border: 1px solid #e5e5e5;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .event-date {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .event-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .event-card p {
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .event-location {
+            color: #999;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .testimonies {
+            background: white;
+        }
+
+        .testimonies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .testimony-card {
+            background: #fafafa;
+            padding: 2.5rem;
+            border-left: 3px solid #1a1a1a;
+        }
+
+        .testimony-quote {
+            color: #333;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimony-author {
+            color: #1a1a1a;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .testimony-church {
+            color: #999;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .resources {
+            background: #fafafa;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .resource-card {
+            background: white;
+            border: 1px solid #e5e5e5;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .resource-type {
+            color: #999;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .resource-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .resource-card p {
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            display: inline-block;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 2px;
+            transition: opacity 0.3s;
+        }
+
+        .download-btn:hover {
+            opacity: 0.5;
+        }
+
+        .giving {
+            background: white;
+        }
+
+        .giving-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .giving-content p {
+            color: #666;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .giving-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .giving-card {
+            background: #fafafa;
+            padding: 2rem;
+            text-align: left;
+        }
+
+        .giving-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .giving-card p {
+            color: #666;
+            font-weight: 300;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .contact {
+            background: #fafafa;
+        }
+
+        .contact-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .prayer-form {
+            max-width: 600px;
+            margin: 0 auto 4rem;
+            background: white;
+            padding: 3rem;
+            border: 1px solid #e5e5e5;
+        }
+
+        .prayer-form h3 {
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #e5e5e5;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1a1a1a;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.8;
+        }
+
+        .churches-contact {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .church-contact-card {
+            background: white;
+            border: 1px solid #e5e5e5;
+            padding: 2rem;
+        }
+
+        .church-contact-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .contact-detail {
+            margin-bottom: 1rem;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .contact-detail strong {
+            color: #1a1a1a;
+            font-weight: 400;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .gallery {
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 4/3;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item svg {
+            width: 60px;
+            height: 60px;
+            opacity: 0.3;
+        }
+
+        .registration {
+            background: white;
+        }
+
+        .registration-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .registration-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .registration-header h3 {
+            color: #1a1a1a;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .registration-header p {
+            color: #666;
+            font-weight: 300;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .event-details {
+            background: #fafafa;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-left: 4px solid #1a1a1a;
+        }
+
+        .event-details h4 {
+            color: #1a1a1a;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .detail-item {
+            color: #666;
+            font-weight: 300;
+        }
+
+        .detail-item strong {
+            display: block;
+            color: #1a1a1a;
+            font-weight: 400;
+            margin-bottom: 0.3rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .form-embed {
+            background: #f5f5f5;
+            padding: 2rem;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .form-embed iframe {
+            width: 100%;
+            min-height: 800px;
+            border: none;
+        }
+
+        .form-placeholder {
+            color: #999;
+            font-weight: 300;
+        }
+
+        .form-placeholder h4 {
+            color: #666;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .form-placeholder p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-placeholder code {
+            display: block;
+            background: white;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-size: 0.85rem;
+            color: #333;
+            border: 1px solid #e5e5e5;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: #000000;
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+            opacity: 0.8;
+        }
+
+        footer strong {
+            font-weight: 400;
+        }
+
+        @media (max-width: 768px) {
+            header .acronym {
+                font-size: 2.5rem;
+                letter-spacing: 4px;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 4rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="acronym">AHFJCPI</div>
+        <h1>Apostolic Holiness Fellowship of Jesus Christ Philippines Inc.</h1>
+        <p>Holiness unto the Lord</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#churches">Churches</a></li>
+            <li><a href="#ministry">Ministry</a></li>
+            <li><a href="#testimonies">Testimonies</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" id="home">
+        <h2>Welcome to AHFJCPI</h2>
+        <p>United in faith, empowered by the Holy Spirit, spreading the Gospel of Jesus Christ across the Philippines</p>
+    </div>
+
+    <section class="events" id="events">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">FEB 15, 2026</div>
+                    <h3>Annual Fellowship Conference</h3>
+                    <p>Join us for three days of worship, teaching, and fellowship as all eight churches come together for our annual conference.</p>
+                    <p class="event-location">📍 Sagay Church</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">FEB 8, 2026</div>
+                    <h3>Baptism Service</h3>
+                    <p>Water baptism for new believers. If you've accepted Christ and want to publicly declare your faith, register with your pastor.</p>
+                    <p class="event-location">📍 Dumaguete Church</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">FEB 1, 2026</div>
+                    <h3>Youth Night of Worship</h3>
+                    <p>An evening dedicated to powerful worship, testimonies, and prayer for our youth across all churches.</p>
+                    <p class="event-location">📍 Old Poblacion Church</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="leadership" id="leadership">
+        <div class="container">
+            <h2 class="section-title">Leadership</h2>
+            <div class="leaders-grid">
+                <div class="leader-card">
+                    <div class="position">Bishop</div>
+                    <h3>Ricardo S. Concepcion</h3>
+                    <p>Spiritual Overseer</p>
+                </div>
+                <div class="leader-card">
+                    <div class="position">Chairman</div>
+                    <h3>Jonadick Maxilom</h3>
+                    <p>Organizational Leader</p>
+                </div>
+                <div class="leader-card">
+                    <div class="position">Vice Chairman</div>
+                    <h3>Joemar Aligato</h3>
+                    <p>Assistant Leader</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="churches" id="churches">
+        <div class="container">
+            <h2 class="section-title">Our Churches</h2>
+            <div class="churches-grid">
+                <div class="church-card">
+                    <div class="church-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L3 9v11a2 2 0 002 2h14a2 2 0 002-2V9l-9-7z"/>
+                            <path d="M12 2v20"/>
+                            <path d="M9 12h6"/>
+                        </svg>
+                    </div>
+                    <div class="church-content">
+                        <h3>Sagay Church</h3>
+                        <p class="pastor-label">Host Pastor</p>
+                        <p>Pastor Ricardo S. Concepcion</p>
+                    </div>
+                </div>
+                <div class="church-card">
+                    <div class="church-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L3 9v11a2 2 0 002 2h14a2 2 0 002-2V9l-9-7z"/>
+                            <path d="M12 2v20"/>
+                            <path d="M9 12h6"/>
+                        </svg>
+                    </div>
+                    <div class="church-content">
+                        <h3>Tamlang Church</h3>
+                        <p class="pastor-label">Host Pastor</p>
+                        <p>Pastor Jeson Bulanon</p>
+                    </div>
+                </div>
+                <div class="church-card">
+                    <div class="church-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L3 9v11a2 2 0 002 2h14a2 2 0 002-2V9l-9-7z"/>
+                            <path d="M12 2v20"/>
+                            <path d="M9 12h6"/>
+                        </svg>
+                    </div>
+                    <div class="church-content">
+                        <h3>Jonob-Jonob Church</h3>
+                        <p class="pastor-label">Host Pastor</p>
+                        <p>Pastor Nicolas Gequilan</p>
+                    </div>
+                </div>
+                <div class="church-card">
+                    <div class="church-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L3 9v11a2 2 0 002 2h14a2 2 0 002-2V9l-9-7z"/>
+                            <path d="M12 2v20"/>
+                            <path d="M9 12h6"/>
+                        </svg>
+                    </div>
+                    <div class="church-content">
+                        <h3>Macasilao Church</h3>
+                        <p class="pastor-label">Host Pastor</p>
+                        <p>Pastor Reneboy Beatingo</p>
+                    </div>
+                </div>
+                <div class="church-card">
+                    <div class="church-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L3 9v11a2 2 0 002 2h14a2 2 0 002-2V9l-9-7z"/>
+                            <path d="M12 2v20"/>
+                            <path d="M9 12h6"/>
+                        </svg>
+                    </div>
+                    <div class="church-content">
+                        <h3>Dumaguete Church</h3>
+                        <p class="pastor-label">Host Pastor</p>
+                        <p>Pastor Joemar Aligato</p>
+                    </div>
+                </div>
+                <div class="church-card">
+                    <div class="church-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L3 9v11a2 2 0 002 2h14a2 2 0 002-2V9l-9-7z"/>
+                            <path d="M12 2v20"/>
+                            <path d="M9 12h6"/>
+                        </svg>
+                    </div>
+                    <div class="church-content">
+                        <h3>Udtungan Church</h3>
+                        <p class="pastor-label">Host Pastor</p>
+                        <p>Pastor Hernanie Ramos</p>
+                    </div>
+                </div>
+                <div class="church-card">
+                    <div class="church-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L3 9v11a2 2 0 002 2h14a2 2 0 002-2V9l-9-7z"/>
+                            <path d="M12 2v20"/>
+                            <path d="M9 12h6"/>
+                        </svg>
+                    </div>
+                    <div class="church-content">
+                        <h3>Old Poblacion Church</h3>
+                        <p class="pastor-label">Host Pastor</p>
+                        <p>Pastor Jonadick Maxilom</p>
+                    </div>
+                </div>
+                <div class="church-card">
+                    <div class="church-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L3 9v11a2 2 0 002 2h14a2 2 0 002-2V9l-9-7z"/>
+                            <path d="M12 2v20"/>
+                            <path d="M9 12h6"/>
+                        </svg>
+                    </div>
+                    <div class="church-content">
+                        <h3>Dian-ay Church</h3>
+                        <p class="pastor-label">Host Pastor</p>
+                        <p>Pastor Elmer Balicuatro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ministry" id="ministry">
+        <div class="container">
+            <h2 class="section-title">Ministry Activities</h2>
+            <div class="ministry-grid">
+                <div class="ministry-card">
+                    <div class="ministry-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="ministry-content">
+                        <div class="ministry-category">Outreach</div>
+                        <h3>Community Feeding Program</h3>
+                        <div class="date">January 15, 2026</div>
+                        <p>Our fellowship reached out to 200 families in the Sagay community, providing meals and sharing God's love.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <div class="ministry-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <div class="ministry-content">
+                        <div class="ministry-category">Fellowship</div>
+                        <h3>Youth Fellowship Gathering</h3>
+                        <div class="date">January 12, 2026</div>
+                        <p>Young believers from all eight churches gathered for worship, teaching, and building lasting friendships in Christ.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <div class="ministry-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <div class="ministry-content">
+                        <div class="ministry-category">Mission</div>
+                        <h3>Evangelism in Remote Areas</h3>
+                        <div class="date">December 28, 2025</div>
+                        <p>Mission team visited mountain communities, preaching the Gospel and establishing new contacts for future ministry.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <div class="ministry-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="ministry-content">
+                        <div class="ministry-category">Baptism</div>
+                        <h3>Water Baptism Service</h3>
+                        <div class="date">December 22, 2025</div>
+                        <p>15 new believers publicly declared their faith through water baptism at Dumaguete Church. Glory to God!</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <div class="ministry-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="ministry-content">
+                        <div class="ministry-category">Outreach</div>
+                        <h3>Medical Mission</h3>
+                        <div class="date">December 10, 2025</div>
+                        <p>Free medical and dental services provided to underserved communities, demonstrating Christ's compassion.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <div class="ministry-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <div class="ministry-content">
+                        <div class="ministry-category">Fellowship</div>
+                        <h3>Pastors' Conference</h3>
+                        <div class="date">November 30, 2025</div>
+                        <p>All host pastors gathered for spiritual refreshment, strategic planning, and strengthening our fellowship unity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonies" id="testimonies">
+        <div class="container">
+            <h2 class="section-title">Testimonies</h2>
+            <div class="testimonies-grid">
+                <div class="testimony-card">
+                    <div class="testimony-quote">"I was lost in addiction and despair, but through the prayers of the fellowship and the power of God, I am now free and serving the Lord. AHFJCPI became my family when I had nothing."</div>
+                    <div class="testimony-author">Brother Mark Dela Cruz</div>
+                    <div class="testimony-church">Sagay Church</div>
+                </div>
+                <div class="testimony-card">
+                    <div class="testimony-quote">"After years of searching for purpose, I found Jesus through the ministry of this fellowship. The Holy Spirit transformed my life completely. I'm now baptized and growing in faith."</div>
+                    <div class="testimony-author">Sister Maria Santos</div>
+                    <div class="testimony-church">Dumaguete Church</div>
+                </div>
+                <div class="testimony-card">
+                    <div class="testimony-quote">"God healed my broken family through this church. The teaching on holiness and the genuine love of the brethren restored what the enemy tried to destroy. Glory to God!"</div>
+                    <div class="testimony-author">Brother Joel Ramos</div>
+                    <div class="testimony-church">Tamlang Church</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources" id="resources">
+        <div class="container">
+            <h2 class="section-title">Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-type">Bible Study</div>
+                    <h3>Foundations of Faith</h3>
+                    <p>A comprehensive study guide on apostolic doctrine and holy living for new believers.</p>
+                    <a href="#" class="download-btn">Download PDF</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-type">Sermon Notes</div>
+                    <h3>Walking in Holiness</h3>
+                    <p>Recent sermon series by Bishop Ricardo S. Concepcion on practical holy living.</p>
+                    <a href="#" class="download-btn">Download PDF</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-type">Prayer Guide</div>
+                    <h3>30 Days of Prayer</h3>
+                    <p>Daily prayer points and scripture readings to deepen your relationship with God.</p>
+                    <a href="#" class="download-btn">Download PDF</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-type">Teaching</div>
+                    <h3>The Baptism of the Holy Spirit</h3>
+                    <p>Biblical teaching on receiving and walking in the power of the Holy Spirit.</p>
+                    <a href="#" class="download-btn">Download PDF</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-type">Discipleship</div>
+                    <h3>New Believer's Guide</h3>
+                    <p>Essential teachings and practices for those new to the faith.</p>
+                    <a href="#" class="download-btn">Download PDF</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-type">Worship</div>
+                    <h3>AHFJCPI Hymnal</h3>
+                    <p>Collection of worship songs and hymns used across our fellowship.</p>
+                    <a href="#" class="download-btn">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="giving">
+        <div class="container">
+            <h2 class="section-title">Give</h2>
+            <div class="giving-content">
+                <p>"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver." - 2 Corinthians 9:7</p>
+                <p>Your tithes and offerings support the work of the Gospel, help maintain our churches, and enable us to reach more souls for Christ.</p>
+                
+                <div class="giving-options">
+                    <div class="giving-card">
+                        <h3>Bank Transfer</h3>
+                        <p><strong>Account Name:</strong> AHFJCPI<br>
+                        <strong>Bank:</strong> [Your Bank Name]<br>
+                        <strong>Account Number:</strong> [Account Number]</p>
+                    </div>
+                    <div class="giving-card">
+                        <h3>GCash</h3>
+                        <p><strong>Mobile Number:</strong> [GCash Number]<br>
+                        <strong>Account Name:</strong> AHFJCPI<br>
+                        Please include your name in the message.</p>
+                    </div>
+                    <div class="giving-card">
+                        <h3>In Person</h3>
+                        <p>You may also give your tithes and offerings during any service at your local church. See your host pastor for details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                    </svg>
+                </div>
+                <div class="gallery-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                    </svg>
+                </div>
+                <div class="gallery-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                    </svg>
+                </div>
+                <div class="gallery-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                    </svg>
+                </div>
+                <div class="gallery-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                    </svg>
+                </div>
+                <div class="gallery-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="contact-intro">We'd love to hear from you. Whether you have questions, need prayer, or want to visit one of our churches, feel free to reach out.</p>
+            
+            <div class="prayer-form">
+                <h3>Prayer Request</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prayer">Prayer Request</label>
+                        <textarea id="prayer" name="prayer" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">SUBMIT REQUEST</button>
+                </form>
+            </div>
+
+            <h3 style="text-align: center; color: #1a1a1a; margin-bottom: 2rem; font-size: 1.5rem; font-weight: 500;">Church Locations</h3>
+            <div class="churches-contact">
+                <div class="church-contact-card">
+                    <h3>Sagay Church</h3>
+                    <div class="contact-detail">
+                        <strong>Pastor</strong>
+                        Ricardo S. Concepcion
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Location</strong>
+                        Sagay, Negros Oriental
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Contact</strong>
+                        [Phone Number]
+                    </div>
+                </div>
+                <div class="church-contact-card">
+                    <h3>Tamlang Church</h3>
+                    <div class="contact-detail">
+                        <strong>Pastor</strong>
+                        Jeson Bulanon
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Location</strong>
+                        Tamlang, Negros Oriental
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Contact</strong>
+                        [Phone Number]
+                    </div>
+                </div>
+                <div class="church-contact-card">
+                    <h3>Jonob-Jonob Church</h3>
+                    <div class="contact-detail">
+                        <strong>Pastor</strong>
+                        Nicolas Gequilan
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Location</strong>
+                        Jonob-Jonob, Negros Oriental
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Contact</strong>
+                        [Phone Number]
+                    </div>
+                </div>
+                <div class="church-contact-card">
+                    <h3>Macasilao Church</h3>
+                    <div class="contact-detail">
+                        <strong>Pastor</strong>
+                        Reneboy Beatingo
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Location</strong>
+                        Macasilao, Negros Oriental
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Contact</strong>
+                        [Phone Number]
+                    </div>
+                </div>
+                <div class="church-contact-card">
+                    <h3>Dumaguete Church</h3>
+                    <div class="contact-detail">
+                        <strong>Pastor</strong>
+                        Joemar Aligato
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Location</strong>
+                        Dumaguete City
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Contact</strong>
+                        [Phone Number]
+                    </div>
+                </div>
+                <div class="church-contact-card">
+                    <h3>Udtungan Church</h3>
+                    <div class="contact-detail">
+                        <strong>Pastor</strong>
+                        Hernanie Ramos
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Location</strong>
+                        Udtungan, Negros Oriental
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Contact</strong>
+                        [Phone Number]
+                    </div>
+                </div>
+                <div class="church-contact-card">
+                    <h3>Old Poblacion Church</h3>
+                    <div class="contact-detail">
+                        <strong>Pastor</strong>
+                        Jonadick Maxilom
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Location</strong>
+                        Old Poblacion, Negros Oriental
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Contact</strong>
+                        [Phone Number]
+                    </div>
+                </div>
+                <div class="church-contact-card">
+                    <h3>Dian-ay Church</h3>
+                    <div class="contact-detail">
+                        <strong>Pastor</strong>
+                        Elmer Balicuatro
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Location</strong>
+                        Dian-ay, Negros Oriental
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Contact</strong>
+                        [Phone Number]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About AHFJCPI</h2>
+            <p>The Apostolic Holiness Fellowship of Jesus Christ Philippines Inc. (AHFJCPI) is a fellowship of believers committed to living in holiness and spreading the apostolic faith throughout the Philippines.</p>
+            <p>We are united by our belief in the power of the Holy Spirit, the importance of holy living, and our mission to share the transformative message of Jesus Christ with every community we serve.</p>
+            
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <h3>Our Mission</h3>
+                    <ul>
+                        <li>Preach the Gospel of Jesus Christ</li>
+                        <li>Promote holy living among believers</li>
+                        <li>Equip saints for ministry</li>
+                        <li>Build strong, Spirit-filled churches</li>
+                    </ul>
+                </div>
+                <div class="mission-card">
+                    <h3>Our Vision</h3>
+                    <ul>
+                        <li>Expand the Kingdom of God</li>
+                        <li>Raise up godly leaders</li>
+                        <li>Transform communities through faith</li>
+                        <li>Unite believers in apostolic doctrine</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Apostolic Holiness Fellowship of Jesus Christ Philippines Inc.</strong></p>
+        <p>AHFJCPI — Spreading Holiness, Building Faith</p>
+        <p>&copy; 2026 AHFJCPI. All rights reserved.</p>
+    </footer>
+</body>
+</html>
